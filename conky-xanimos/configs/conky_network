@@ -47,7 +47,7 @@ ${GOTO 20}${upspeedgraph enp8s0 15,170 0EA794 DCDCDC}
 ${GOTO 20}${downspeedgraph enp8s0 15,170 0EA794 DCDCDC}
 ${voffset 15}${GOTO 50}${font}Recieve: ${font Monofur:size=8}${downspeed enp8s0}${GOTO 200}${font}Send: ${font Monofur:size=8}${upspeed enp8s0}
 ${image /home/mpinho/Desenvolvimento/conky/versoes/custom-conky/conky-xanimos/img/networkhigh.png -p 0,5}${else}${if_existing /proc/net/route wlp2s0}${voffset 8}${GOTO 50}${font Monofur:bold:size=18}Network${font}
-${voffset 5}${GOTO 50}${font}Public: ${color0}${font Monofur:size=8}${texeci 36000 wget -qO - http://ipecho.net/plain | tail}${color}
+${voffset 5}${GOTO 50}${font}Public: ${color0}${font Monofur:size=8}${execi 3600 curl ifconfig.me | tail }${color}
 ${voffset 5}${GOTO 50}${font}Local: ${color0}${font Monofur:size=8}${addrs wlp2s0}${color}
 ${voffset 5}${GOTO 50}${font}Up: ${font Monofur:size=8}${upspeed wlp2s0}
 ${voffset -3}${GOTO 50}${upspeedgraph wlp2s0 15,150 0EA794 0EA794 5000}
