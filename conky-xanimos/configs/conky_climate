@@ -29,10 +29,8 @@ conky.config = {
 
 -- ------------------------- Other
 	update_interval = 1,
-
 };
 
-
 conky.text = [[
-${font GE Inspira:bold:pixelsize=15}${exec curl wttr.in/Rio%20de%20Janeiro?format='%l:+%c+%t,+%w'}
+${font GE Inspira:bold:pixelsize=15}${exec curl wttr.in/Rio%20de%20Janeiro?format='%l:+%C+%t,+%w'}
 ]];
